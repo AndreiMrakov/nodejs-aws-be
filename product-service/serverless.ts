@@ -31,9 +31,10 @@ const serverlessConfiguration: AWS = {
 					http: {
 						method: 'get',
 						path: 'films',
-					}
-				}
-			]
+						cors: true,
+					},
+				},
+			],
 		},
 		getByID: {
 			handler: 'src/handlers/getByID.getByID',
@@ -42,10 +43,11 @@ const serverlessConfiguration: AWS = {
 					http: {
 						method: 'get',
 						path: 'films/{id}',
-					}
-				}
-			]
-		}
+						cors: true,
+					},
+				},
+			],
+		},
 	},
 };
 

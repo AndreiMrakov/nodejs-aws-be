@@ -5,5 +5,8 @@ export const getAll: APIGatewayProxyHandler = async () => {
 	return {
 		statusCode: 200,
 		body: JSON.stringify(films),
+		headers: {
+			'Access-Control-Allow-Origin': '*',
+		},
 	}
 }

@@ -15,6 +15,7 @@ export const getByID: APIGatewayProxyHandler = async (event) => {
 			}),
 			headers: {
 				'Content-Type': 'application/json',
+				'Access-Control-Allow-Origin': '*',
 			},
 		}
 	}
@@ -22,5 +23,8 @@ export const getByID: APIGatewayProxyHandler = async (event) => {
 	return {
 		statusCode: 200,
 		body: JSON.stringify(founded),
+		headers: {
+			'Access-Control-Allow-Origin': '*',
+		},
 	}
 }
