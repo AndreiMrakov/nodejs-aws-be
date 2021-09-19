@@ -10,10 +10,13 @@
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
-    "target": "ES2020",
+    "isolatedModules": false, // if true you should export types and interfaces separately to variables
+    "target": "ES2020"
   },
   "include": [
-    "src/**/*.ts", "serverless.ts"],
+    "src/**/*.ts",
+	  "serverless.ts_old"
+  ],
   "exclude": [
     "node_modules/**/*",
     ".serverless/**/*",

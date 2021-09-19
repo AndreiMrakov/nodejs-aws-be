@@ -71,7 +71,7 @@ The project code base is mainly located within the `src` folder. This folder is 
 │       └── index.ts            # Import/export of all lambda configurations
 │
 ├── package.json
-├── serverless.ts               # Serverless service file
+├── serverless.ts_old               # Serverless service file
 ├── tsconfig.json               # Typescript compiler configuration
 ├── tsconfig.paths.json         # Typescript paths
 └── webpack.config.js           # Webpack configuration
@@ -79,8 +79,12 @@ The project code base is mainly located within the `src` folder. This folder is 
 
 ### 3rd party libraries
 
-- [@serverless/typescript](https://github.com/serverless/typescript) - provides up-to-date TypeScript definitions for your `serverless.ts` service file
+- [@serverless/typescript](https://github.com/serverless/typescript) - provides up-to-date TypeScript definitions for your `serverless.ts_old` service file
 
 ### Advanced usage
 
 Any tsconfig.json can be used, but if you do, set the environment variable `TS_NODE_CONFIG` for building the application, eg `TS_NODE_CONFIG=./tsconfig.app.json npx serverless webpack`
+
+
+### AWS URL
+- `1_product.sql`: https://nj9dejyrn1.execute-api.eu-west-1.amazonaws.com/dev/films

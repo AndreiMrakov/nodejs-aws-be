@@ -1,0 +1,1 @@
+export { IRating } from "./IRating";

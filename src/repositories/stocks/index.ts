@@ -1,0 +1,1 @@
+export { StocksRepository } from './stocks'
