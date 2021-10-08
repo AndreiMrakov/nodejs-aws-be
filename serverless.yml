@@ -43,3 +43,10 @@ functions:
           method: 'get'
           path: 'films/{id}'
           cors: true
+  create:
+    handler: 'src/handlers/products/create.create'
+    events:
+      - http:
+          method: 'post'
+          path: 'films'
+          cors: true

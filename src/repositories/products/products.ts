@@ -1,3 +1,4 @@
+import { ICreateProduct, IProduct } from '@/utils/interfaces';
 import { ClientBase } from 'pg';
 
 export class ProductsRepository {
@@ -19,7 +20,7 @@ export class ProductsRepository {
 		return rows
 	}
 	
-	async getByID(id: string) {
+	async getByID(id: IProduct['id']) {
 		const { rows } = await this._query(
 			`SELECT id, title, description, price, count
 				 FROM ${ this._tableName }
@@ -30,5 +31,25 @@ export class ProductsRepository {
 		)
 		
 		return rows?.[0] || null
+	}
+	
+	async create(dto: ICreateProduct) {
+		// const { rows } = await this._query(
+		// 	`
+		// 		INSERT INTO ${ this._tableName }
+		// 			(
+		// 				title,
+		// 				description,
+		// 				price
+		// 			)
+		// 			VALUES
+		// 				(
+		// 					${ dto.title },
+		// 					${ dto.description },
+		// 					${ dto.price },
+		// 				) returning id`,
+		// )
+		//
+		// return rows[0]
 	}
 }
